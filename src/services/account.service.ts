@@ -25,28 +25,28 @@ export class AccountService {
     localStorage.removeItem('access_token');
   }
 
-  login(obj:any) {
-    return this.http.post(environment.apiUrl + '/auth/login/', obj).pipe(map((token:any) => {
-      localStorage.setItem('access_token', token.token);
-      this.isUserLoggedIn = true;
-      localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
-      this.tokenSubject.next(token);
-      return of(this.isUserLoggedIn).pipe(
-        delay(1000),
-        tap(val => {
-          console.log('Is user authenticated' + val)
-        })
-      )
-    }));
-  }
+  // login(obj:any) {
+  //   return this.http.post(environment.apiUrl + '/auth/login/', obj).pipe(map((token:any) => {
+  //     localStorage.setItem('access_token', token.token);
+  //     this.isUserLoggedIn = true;
+  //     localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
+  //     this.tokenSubject.next(token);
+  //     return of(this.isUserLoggedIn).pipe(
+  //       delay(1000),
+  //       tap(val => {
+  //         console.log('Is user authenticated' + val)
+  //       })
+  //     )
+  //   }));
+  // }
 
-  logout(): void {
-    this.isUserLoggedIn = false;
-       localStorage.removeItem('isUserLoggedIn'); 
-  }
+  // logout(): void {
+  //   this.isUserLoggedIn = false;
+  //      localStorage.removeItem('isUserLoggedIn'); 
+  // }
 
   getInvoices(){
-    return this.http.get(environment.apiUrl+'/api/invoices');
+    return this.http.get('./assets/data/data.json');
   }
 
   getInvoice(id:number){
@@ -54,7 +54,7 @@ export class AccountService {
   }
 
   getStatuses() {
-    return this.http.get(environment.apiUrl+'/api/statuses');
+    return this.http.get('./assets/data/status.json');
   }
 
   getInvoiceItems() {

@@ -72,7 +72,8 @@
 }
 
 .list-container {
-    margin-top: 70px;
+    overflow: auto;
+    height: 74vh;
     .list-entry {
         background: #fff;
         padding: 30px;
@@ -135,7 +136,7 @@
                 background-color: #ff8f00;
                 border-radius: 30px;
             }
-            position: absolute;
+            position: relative;
             display: flex;
             margin-top: -26px;
             margin-left: 53px;

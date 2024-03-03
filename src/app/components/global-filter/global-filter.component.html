@@ -29,21 +29,21 @@
             <span class="number">#</span>{{item.id}}
         </div>
         <div class="date">
-            {{item.invoice_date}}
+            {{item.createdAt}}
         </div>
         <div class="client">
-            {{item.client_name}}
+            {{item.clientName}}
         </div>
         <div class="price">
-            £ 1,800.90
+            £ {{item.total}}
         </div>
-        <div class="status" [ngClass]="{'paid': checkStatusId(item.status)==='Paid', 'pending': checkStatusId(item.status)==='Pending'}">
-            <div class="background" [ngClass]="{'paid': checkStatusId(item.status)==='Paid', 'pending': checkStatusId(item.status)==='Pending'}">
+        <div class="status" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending'}">
+            <div class="background" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending'}">
                 
             </div>
             <div class="text">
                 <div class="dot"></div>
-                {{checkStatusId(item.status)}}
+                {{item.status}}
             </div>
         </div>
         <div class="arrow-div">
