@@ -1,0 +1,203 @@
+.filter-container {
+    display: flex;
+    align-items: center;
+    width: 730px;
+    justify-content: space-between;
+    .left-container {
+        h2 {
+            font-family: League Spartan;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -1.125px;
+            margin: 0;
+            padding-bottom: 7px;
+        }
+        p {
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px; /* 115.385% */
+            letter-spacing: -0.1px;
+            color: #888EB0;
+            margin: 0;
+        }
+        
+    }
+    .right-container {
+        button.mat-mdc-menu-trigger.filter-button {
+            margin-right: 23px;
+        }
+        .filter-button .text {
+            display: flex;
+            align-items: center;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+            mat-icon.mat-icon {
+                color: #7C5DFA;
+                margin-left: 6px;
+            }
+        }
+        button.add-invoice {
+            background: #7C5DFA !important;
+            border-radius: 50px;
+            height: 49px;
+            margin: 0;
+            padding: 0 14.5px;
+            mat-icon.mat-icon {
+                background: #fff;
+                border-radius: 82px;
+                padding: 7px;
+                color: #7c5dfb;
+                font-weight: bold;
+            }
+            span.button-text {
+                color: #FFF;
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: -0.25px;
+                margin-left: 7px;
+            }
+        }
+    }
+}
+
+.list-container {
+    margin-top: 70px;
+    .list-entry {
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 14px;
+        .id,.price{
+            color: #0C0E16;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+        }
+        .date {
+            color: #7E88C3;
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: -0.1px;
+        }
+        .client {
+            color: #858BB2;
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: -0.1px;
+        }
+        .status .pending {
+            width: 67px;
+            height: 13px;
+            flex-grow: 0;
+            margin: 0 20px 0 40px;
+            padding: 14px 19px 11px 18px;
+            opacity: 0.06;
+            border-radius: 6px;
+            background-color: #ff8f00;
+        }
+        .status .paid {
+            width: 67px;
+            height: 13px;
+            flex-grow: 0;
+            margin: 0 20px 0 40px;
+            padding: 14px 19px 11px 18px;
+            opacity: 0.06;
+            border-radius: 6px;
+            background-color: #33d69f
+        }
+        .status .text {
+            .dot {
+                width: 8px;
+                height: 8px;
+                margin: 3px 8px 4px 0;
+                background-color: #ff8f00;
+                border-radius: 30px;
+            }
+            position: absolute;
+            display: flex;
+            margin-top: -26px;
+            margin-left: 53px;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: -0.25px;
+            text-align: left;
+            color: #ff8f00;
+            width: 77px;
+            justify-content: space-between;
+        }
+    }   
+    .status.paid .text {
+        .dot {
+            width: 8px;
+            height: 8px;
+            margin: 3px 8px 4px 0;
+            background-color: #33d69f !important;
+            border-radius: 30px;
+        }
+        width: 44px !important;
+        margin-left:68px !important;
+        color:#33d69f !important;
+    }
+    span.number {
+        color: #7E88C3;
+    }
+    .arrow-div mat-icon.mat-icon.notranslate.material-icons.mat-ligature-font.mat-icon-no-color {
+        color: #7C5DFA;
+    }
+    .empty-container {
+        text-align: center;
+    }
+    button.mdc-fab.mdc-fab--mini.mat-mdc-mini-fab.mat-accent.mat-mdc-button-base {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+//Dialog Styling
+::ng-deep mat-dialog-container#new-invoice-dialog {
+    position: absolute !important;
+    max-width: 618px !important;
+    left: 105px !important;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    box-shadow: none !important;
+}
+
+::ng-deep .cdk-overlay-backdrop {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 107px !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}

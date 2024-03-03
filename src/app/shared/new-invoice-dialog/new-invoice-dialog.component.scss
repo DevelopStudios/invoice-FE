@@ -1,0 +1,184 @@
+.new-invoice__container {
+    .header {
+        color: var(--08, #0C0E16);
+        font-family: League Spartan;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.5px;
+        margin: 56px 0 49px 59px;
+    }
+    .multi-form__container {
+        display: flex;
+        margin-left: 37px;
+        margin-right: 22px;
+        margin-top: -18px;
+        justify-content: space-evenly;
+        .form-entry__container {
+            margin-right: 0;
+            width: 27%;
+            .form-field {
+                margin-left: 0;
+            }
+        }
+        .form-entry__container.two {
+            width: 43%!important;
+        }
+    }
+    .form-entry__container {
+        margin-right: 50px;
+        .container-label {
+            color: var(--01, #7C5DFA);
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px; /* 100% */
+            letter-spacing: -0.25px;
+            margin-left: 60px;
+        }
+        .container-label__item {
+            color: #777F98;
+            font-family: League Spartan;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.375px;
+            margin-left: 61px;
+        }
+        .form-field {
+            margin-left: 60px;
+            .label {
+                color: var(--07, #7E88C3);
+                font-family: League Spartan;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 15px;
+                letter-spacing: -0.1px;
+                margin-top: 26px;
+                margin-bottom: 10px;
+            }
+            mat-form-field {
+                width: 100%;
+            }
+        }
+    }
+}
+.button-container {
+    margin: 0 60px;
+    button.add-button {
+        width: 100%;
+        border-radius: 24px;
+        background: #F9FAFE;
+        .text {
+            color: var(--07, #7E88C3);
+            text-align: center;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px; /* 100% */
+            letter-spacing: -0.25px;
+        }
+    }
+}
+
+//CSS Grid
+.item-entry__container {
+    display: grid;
+    grid-template-columns: 29% auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    margin-left: 9%;
+    div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-size: 30px;
+        .label {
+            color: var(--07, #7E88C3);
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: -0.1px;
+            text-align: left;
+        }
+    }
+    .meta-fields {
+        display: flex;
+        align-items: center;
+        margin-top: -23px;
+        justify-content: end;
+        .total-text {
+            color: var(--06, #888EB0);
+            font-family: League Spartan;
+            font-size: 15px !important;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+            margin-right:30px;
+        }
+        button.mdc-fab.mdc-fab--mini {
+            background: transparent;
+            box-shadow: none;
+            color:var(--06, #888EB0);
+        }
+    }
+    
+    .form:nth-of-type(1) {
+        mat-form-field.mat-mdc-form-field {
+            width: 131px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .form {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        mat-form-field.mat-mdc-form-field {
+            width: 80px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+.footer {
+    margin: 32px 0;
+    display: flex;
+    justify-content: end;
+    button.save {
+        border-radius: 24px;
+        background: var(--01, #7C5DFA);
+        padding: 20px;
+        .text {
+            color: #FFF;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px; /* 100% */
+            letter-spacing: -0.25px;
+        }
+    }
+    button.cancel {
+        border-radius: 24px;
+        padding: 20px;
+        margin-right: 8px;
+        .text {
+            color: var(--07, #7E88C3);
+            text-align: center;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px; /* 100% */
+            letter-spacing: -0.25px;
+        }
+    }
+}

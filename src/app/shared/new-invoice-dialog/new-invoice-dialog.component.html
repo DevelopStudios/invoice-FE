@@ -1,0 +1,219 @@
+<div class="new-invoice__container">
+    <div class="header">
+        New Invoice
+    </div>
+    <div class="form-entry__container">
+        <div class="container-label">
+            Bill From
+        </div>
+        <div class="form-field">
+            <div class="label">
+                Street Address
+            </div>
+            <mat-form-field appearance="outline">
+                <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="multi-form__container">
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    City
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    Post Code
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    Country
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-entry__container">
+        <div class="container-label">
+            Bill To
+        </div>
+        <div class="form-field">
+            <div class="label">
+                Client's Name
+            </div>
+            <mat-form-field appearance="outline">
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="form-field">
+            <div class="label">
+                Client's Email
+            </div>
+            <mat-form-field appearance="outline">
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="form-field">
+            <div class="label">
+                Street Address
+            </div>
+            <mat-form-field appearance="outline">
+                <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="multi-form__container">
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    City
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    Post Code
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-entry__container">
+            <div class="form-field">
+                <div class="label">
+                    Country
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div class="multi-form__container">
+        <div class="form-entry__container two">
+            <div class="form-field">
+                <div class="label">
+                    Invoice Date
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-entry__container two">
+            <div class="form-field">
+                <div class="label">
+                    Payment Terms
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div class="form-entry__container">
+        <div class="form-field">
+            <div class="label">
+                Project Description
+            </div>
+            <mat-form-field appearance="outline">
+                <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-entry__container">
+        <div class="container-label__item">
+            Item List
+        </div>
+        <div class="item-entry__container">
+            <div>
+                <div class="label">
+                    Item Name
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Qty.
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Price
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Total
+                </div>
+            </div>
+        </div>
+        <div class="item-entry__container" *ngFor="let item of itemList, let i = index">
+            <div class="form">
+                <mat-form-field appearance="outline" >
+                    <input matInput [(ngModel)]="item.name">
+                </mat-form-field>
+            </div>
+            <div class="form">
+                <mat-form-field appearance="outline">
+                    <input matInput [(ngModel)]="item.price">
+                </mat-form-field>
+            </div>
+            <div class="form">
+                <mat-form-field appearance="outline">
+                    <input matInput [(ngModel)]="item.qty">
+                </mat-form-field>
+            </div>
+            <div class="meta-fields">
+                <div class="total-text">
+                    156.00
+                </div>
+                <div class="actions">
+                    <button mat-mini-fab (click)="removeItem(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button mat-button class="add-button" (click)="addItem()">
+            <span class="text">
+                + Add New Item
+            </span>
+        </button>
+    </div>
+    <div class="footer">
+        <div class="button-container">
+            <button mat-button class="cancel" (click)="noClick()">
+                    <span class="text">
+                        Cancel
+                    </span>
+            </button>
+            <button mat-button class="save" (click)="saveDialog()">
+                <span class="text">
+                    Save Changes
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
