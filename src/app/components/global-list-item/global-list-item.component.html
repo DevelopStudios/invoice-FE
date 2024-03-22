@@ -16,8 +16,8 @@
                 Status
             </div>
   
-            <div *ngIf="invoice?.status" class="status" [ngClass]="{'paid': invoice.status==='paid', 'pending': invoice.status==='pending'}">
-                <div class="background" [ngClass]="{'paid': invoice.status==='paid', 'pending': invoice.status==='pending'}">
+            <div *ngIf="invoice?.status" class="status" [ngClass]="{'paid': invoice.status==='paid', 'pending': invoice.status==='pending', 'draft': invoice.status==='draft'}">
+                <div class="background" [ngClass]="{'paid': invoice.status==='paid', 'pending': invoice.status==='pending', 'draft': invoice.status==='draft'}">
                     
                 </div>
                 <div class="text">

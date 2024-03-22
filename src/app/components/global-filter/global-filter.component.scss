@@ -152,7 +152,17 @@
             width: 77px;
             justify-content: space-between;
         }
-    }   
+    }
+    .background.draft {
+        width: 50px;
+        height: 13px;
+        flex-grow: 0;
+        margin: 0 20px 0 40px;
+        padding: 14px 19px 11px 18px;
+        opacity: 0.06;
+        border-radius: 6px;
+        background-color: #373B53;
+    }
     .status.paid .text {
         .dot {
             width: 8px;
@@ -164,6 +174,15 @@
         width: 44px !important;
         margin-left:68px !important;
         color:#33d69f !important;
+    }
+    .status.draft .text {
+        .dot {
+            background-color: #373B53 !important;
+        }
+        color:#373B53 !important;
+        margin-left: 39px !important;
+        width: 58px !important;
+        left: 14px;
     }
     span.number {
         color: #7E88C3;

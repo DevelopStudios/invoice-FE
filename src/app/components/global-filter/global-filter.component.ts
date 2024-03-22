@@ -11,7 +11,9 @@ import { NewInvoiceDialogComponent } from 'src/app/shared/new-invoice-dialog/new
 })
 export class GlobalFilterComponent {
   invoices: Invoice[]=[];
+  filteredInvoices: Invoice[]=[];
   statuses: Status[]=[];
+  filterOptions: string[]=['Paid','Pending','Draft'];
   showLoader: Boolean = false;
   constructor(private account:AccountService, public dialog: MatDialog) {
 
@@ -21,11 +23,13 @@ export class GlobalFilterComponent {
     this.showLoader = true;
     this.account.getInvoices().subscribe((value:any) => {
       this.invoices = value;
+      this.filteredInvoices = value;
       this.showLoader = false;
     });
     this.account.getStatuses().subscribe((value:any) => {
       this.statuses = value;
     });
+    
   }
 
   toggleNewInvoice():void {
@@ -35,7 +39,14 @@ export class GlobalFilterComponent {
       id:'new-invoice-dialog'
     });
   }
-
+  filterList(option:string){
+    let invoices = this.invoices;
+    let result = invoices.filter((value:Invoice) => {
+      return value.status === option.toLocaleLowerCase();
+    });
+    console.log(result);
+    this.filteredInvoices = result;
+  }
   checkStatusId(id:number){
     return this.statuses.filter(value => value?.id === id)[0]?.status;
   }

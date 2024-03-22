@@ -13,8 +13,7 @@
                 </div>
             </button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>Item 1</button>
-                <button mat-menu-item>Item 2</button>
+                <button mat-menu-item *ngFor="let item of filterOptions" (click)="filterList(item)">{{item}}</button>
             </mat-menu>
             <button mat-flat-button class="add-invoice" (click)="toggleNewInvoice()">
                 <mat-icon>add</mat-icon><span class="button-text">New Invoice</span>
@@ -24,7 +23,7 @@
 </div>
 
 <div class="list-container">
-    <div class="list-entry" *ngFor="let item of invoices">
+    <div class="list-entry" *ngFor="let item of filteredInvoices">
         <div class="id">
             <span class="number">#</span>{{item.id}}
         </div>
@@ -37,8 +36,8 @@
         <div class="price">
             £ {{item.total}}
         </div>
-        <div class="status" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending'}">
-            <div class="background" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending'}">
+        <div class="status" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending', 'draft': item.status==='draft'}">
+            <div class="background" [ngClass]="{'paid': item.status==='paid', 'pending': item.status==='pending', 'draft': item.status==='draft'}">
                 
             </div>
             <div class="text">
