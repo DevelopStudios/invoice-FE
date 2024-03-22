@@ -22,6 +22,7 @@
 
 # IDEs and editors
 .idea/*
+.angular
 !.idea/runConfigurations/
 !.idea/codeStyleSettings.xml
 .project
