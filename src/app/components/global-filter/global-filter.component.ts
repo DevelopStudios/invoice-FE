@@ -20,7 +20,6 @@ export class GlobalFilterComponent {
   ngOnInit(){
     this.showLoader = true;
     this.account.getInvoices().subscribe((value:any) => {
-      console.log(value);
       this.invoices = value;
       this.showLoader = false;
     });

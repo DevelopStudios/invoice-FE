@@ -24,22 +24,22 @@
     <div class="parent" *ngFor="let item of invoice_items">
         <div class="item entry name">
             <div class="text name">
-                {{checkName(item)}}
+                {{item.name}}
             </div>
         </div>
         <div class="item entry">
             <div class="text qty">
-                {{checkQty(item)}}
+                {{item.quantity}}
             </div>
         </div>
         <div class="item entry">
             <div class="text price">
-                {{checkPrice(item)}}
+                {{item.price}}
             </div>
         </div>
         <div class="item entry">
             <div class="text total">
-                {{checkTotal(item)}}
+                {{item.total}}
             </div>
         </div>
     </div>

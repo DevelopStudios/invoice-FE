@@ -11,34 +11,6 @@ export class InvoiceItemsComponent implements OnInit {
   constructor(){
   }
 
-  checkName(id:any) {
-    let selection = this.items?.filter((value:any) => {
-      return value.id === id;
-    });
-    return selection[0].name;
-  }
-
-  checkQty(id:any) {
-    let selection = this.items?.filter((value:any) => {
-      return value.id === id;
-    });
-    return selection[0].qty;
-  }
-
-  checkPrice(id:any) {
-    let selection = this.items?.filter((value:any) => {
-      return value.id === id;
-    });
-    return selection[0].price;
-  }
-
-  checkTotal(id:any) {
-    let selection = this.items?.filter((value:any) => {
-      return value.id === id;
-    });
-    return selection[0].total;
-  }
-
   ngOnInit() {
   }
 
