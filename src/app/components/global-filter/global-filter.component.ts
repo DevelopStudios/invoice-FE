@@ -44,7 +44,6 @@ export class GlobalFilterComponent {
     let result = invoices.filter((value:Invoice) => {
       return value.status === option.toLocaleLowerCase();
     });
-    console.log(result);
     this.filteredInvoices = result;
   }
   checkStatusId(id:number){
